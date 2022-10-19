@@ -7,10 +7,10 @@ import retrofit2.Response
 
 object RepositoryImpl:Repository {
     override suspend fun getPersonList(count: Int): Response<Items> {
-        TODO("Not yet implemented")
+        return RetrofitInstance.apiService.getPersonList(count)
     }
 
     override suspend fun getPerson(id: Int): Response<Person> {
-        TODO("Not yet implemented")
+        return RetrofitInstance.apiService.getPerson(id)
     }
 }
